@@ -37,7 +37,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="landing">
-        <div className="img"></div>
+        {/* <div className="img"></div>s */}
         <div className="copy">
           {' '}
           <img className="img-fluid logo" src={logo} alt="" />
@@ -69,9 +69,16 @@ class Landing extends React.Component {
           </p>
           <div className="sweeterCard">
             {/* <img className="img-fluid" src={cardBg} alt="" /> */}
-            <h2 className="sweeterHeadline">
+            <h2 className="sweeterHeadline desktop">
               Want to make <span className="lobster">your</span> moments
               sweeter?
+            </h2>
+            <h2 className="sweeterHeadline mobile">
+              {' '}
+              Want to make <br />
+              <span className="lobster">your</span>
+              <br /> moments
+              <br /> sweeter?
             </h2>
             <p>
               Come back on December 5th to submit instructions for your favorite

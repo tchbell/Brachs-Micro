@@ -37,6 +37,24 @@ code {
   src: url('./assets/fonts/DKMagicalBrush-Regular.otf') format('opentype');
 }
 
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 676px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -46,7 +64,8 @@ p {
   font-family: Gothic-Medium;
   font-size: 12px;
 }
-@media screen and (min-width: 790px) {
+
+@media screen and (min-width: 676px) {
   p {
     font-size: 16px;
   }
@@ -59,11 +78,12 @@ h1 {
   color: #60269e;
 }
 
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 676px) {
   h1 {
     font-size: 3.5rem;
   }
 }
+
 ul.nav-tabs {
   display: none;
 }
@@ -73,7 +93,7 @@ ul.nav-tabs {
 }
 
 .wrapper {
-  background-image: url('./assets/images/Mobile/BR-HOLMicrosite-ThankYou-BackgroundImage_Mobile.png');
+  background-image: url('./assets/images/Mobile/ThankYouBg.png');
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -84,9 +104,9 @@ ul.nav-tabs {
   height: 100%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 676px) {
   .wrapper {
-    background-image: url('./assets/images/Desktop/BR-HOLMicrosite-ThankYou-BackgroundImage_Desktop.png');
+    background-image: url('./assets/images/Desktop/ThankYouBg.png');
   }
 }
 
@@ -101,7 +121,7 @@ ul.nav-tabs {
 
 .landing {
   display: flex;
-  min-height: 90vh;
+  min-height: 100vh;
   align-items: center;
 }
 
@@ -110,21 +130,42 @@ ul.nav-tabs {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 70%;
+  width: 100%;
   flex-direction: column;
-  padding-right: 2rem;
-  margin-left: auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 676px) {
+  .landing .copy {
+    width: 70%;
+    padding-right: 2rem;
+    margin-left: auto;
+  }
 }
 
 .landing .copy p {
-  max-width: 400px;
+  max-width: 300px;
 }
+
+@media screen and (min-width: 676px) {
+  .landing .copy p {
+    max-width: 400px;
+  }
+}
+
 .landing .logo {
   max-width: 315px;
+  margin-top: 17rem;
+}
+
+@media screen and (min-width: 676px) {
+  .logo {
+    margin-top: 0;
+  }
 }
 
 .sweeterCard {
-  background-image: url('./assets/images/Desktop/Postcard-Envelope-Desktop.png');
+  background-image: url('./assets/images/Mobile/Postcard-Envelope-Mobile.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -136,6 +177,12 @@ ul.nav-tabs {
   width: 100%;
 }
 
+@media screen and (min-width:676px) {
+  .sweeterCard {
+    background-image: url('./assets/images/Desktop/Postcard-Envelope-Desktop.png');
+  }
+}
+
 .sweeterCard p {
   max-width: 630px;
   margin: 1rem 1.5rem;
@@ -143,7 +190,7 @@ ul.nav-tabs {
 
 .sweeterHeadline {
   font-family: DKMagical-Brush;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #60269e;
   line-height: 1;
   max-width: 500px;
@@ -155,9 +202,18 @@ ul.nav-tabs {
     font-size: 3.5rem;
   }
 }
+
 .lobster {
   font-family: Lobster;
   color: #a6228c;
+  line-height: 0;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 790px) {
+  .lobster {
+    font-size: inherit;
+  }
 }
 
 .disclaimer {
