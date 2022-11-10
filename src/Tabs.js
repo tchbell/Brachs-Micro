@@ -48,18 +48,20 @@ class TabsComponent extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        {' '}
-        <Tabs
-          defaultActiveKey="home"
-          activeKey={this.state.key}
-          id=""
-          className=""
-        >
-          <Tab eventKey="landing" title="landing">
-            <Landing submitData={this.submitData}></Landing>
-          </Tab>
-          <Tab eventKey="submission" title="submission"></Tab>
-        </Tabs>
+        <div className="projectContainer">
+          {' '}
+          <Tabs
+            defaultActiveKey="landing"
+            activeKey={this.state.key}
+            id=""
+            className=""
+          >
+            <Tab eventKey="landing" title="landing">
+              <Landing submitData={this.submitData}></Landing>
+            </Tab>
+            <Tab eventKey="submission" title="submission"></Tab>
+          </Tabs>
+        </div>
       </div>
     );
   }

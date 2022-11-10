@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: Gothic-Black;
+  src: url('./assets/fonts/Gotham-Black.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Gothic-Book;
+  src: url('./assets/fonts/Gotham-Book.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Gothic-Medium;
+  src: url('./assets/fonts/Gotham-Medium.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Lobster;
+  src: url('./assets/fonts/lobster_[allfont.ru].ttf') format('truetype');
+}
+
+@font-face {
+  font-family: DKMagical-Brush;
+  src: url('./assets/fonts/DKMagicalBrush-Regular.otf') format('opentype');
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: Gothic-Medium;
+}
+
+
+h1 {
+  font-family: DKMagical-Brush;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  color: #60269E;
+}
+
+
+ul.nav-tabs {
+  display: none;
+}
+
+.wrapper {
+  background-image: url('./assets/images/Mobile/BR-HOLMicrosite-ThankYou-BackgroundImage_Mobile.png');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .wrapper {
+    background-image: url('./assets/images/Desktop/BR-HOLMicrosite-ThankYou-BackgroundImage_Desktop.png');
+  }
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.landing {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+
+}
+
+.landing .img {
+  width: 50%;
+}
+
+.landing .copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  flex-direction: column;
+  padding: 0 4rem;
+}
+
+.landing .logo {
+  max-width: 315px;
+}
+
+.sweeterCard {
+  background-image: url('./assets/images/Desktop/Postcard-Envelope-Desktop-withHeader.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 400px;
+}
+
+.sweeterCard p {
+  margin-top: 12rem;
+  padding: 0 3rem;
+  max-width: 630px;
+}
+
+.disclaimer {
+  font-size: 10px;
+  text-align: left;
+}
+
+button.subscribe {
+  padding: 1rem;
+  background-color: #60269E;
+  color: white;
+  font-family: Gothic-Medium;
+  font-size: 1.25rem;
+  border-radius: 25px;
+  border: none;
+  transition: 0.2s ease-in-out all;
+}
+
+button.subscribe:hover {
+  box-shadow: 2px 2px 5px #000;
+  cursor: pointer;
+}
