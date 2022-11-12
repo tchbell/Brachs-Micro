@@ -159,7 +159,7 @@ ul.nav-tabs {
 }
 
 @media screen and (min-width: 676px) {
-  .logo {
+  .landing .logo {
     margin-top: 0;
   }
 }
