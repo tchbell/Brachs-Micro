@@ -99,17 +99,18 @@ ul.nav-tabs {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: auto;
-  overflow-x: hidden;
+  /* overflow: auto;
+  overflow-x: hidden; */
   height: 100%;
+  margin-bottom: -80px;
+  padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 676px) {
   .wrapper {
-    background-image: url('./assets/images/Desktop/ThankYouBg.png');
+    background-image: url('./assets/images/Desktop/BR-HOLMicrosite-ComingSoonPage-Desktop.png');
   }
 }
-
 .projectContainer {
   display: flex;
   justify-content: center;
@@ -132,7 +133,13 @@ ul.nav-tabs {
   text-align: center;
   width: 100%;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 676px) {
+  .landing .copy {
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 676px) {
@@ -177,7 +184,7 @@ ul.nav-tabs {
   width: 100%;
 }
 
-@media screen and (min-width:676px) {
+@media screen and (min-width: 676px) {
   .sweeterCard {
     background-image: url('./assets/images/Desktop/Postcard-Envelope-Desktop.png');
   }
@@ -230,9 +237,14 @@ button.subscribe {
   border-radius: 25px;
   border: none;
   transition: 0.2s ease-in-out all;
+  margin-top: 40px;
 }
 
 button.subscribe:hover {
   box-shadow: 2px 2px 5px #000;
   cursor: pointer;
+}
+
+fieldset {
+  border: none;
 }

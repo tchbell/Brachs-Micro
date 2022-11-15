@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './assets/images/Brachs-MakeMomentsSweeter-logo-01.png';
-import cardBg from './assets/images/Desktop/Postcard-Envelope-Desktop-withHeader.png';
+import logo from './assets/images/Brachs-Logo.png';
+
 class Landing extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ class Landing extends React.Component {
             generations together with our first-ever nationwide tradition swap.
           </p>
           <p>
-            On December 4th at XX time, tune in on IG Live to watch{' '}
+            On December 4th, tune in on IG Live to watch{' '}
             <a
               target="_blank"
               rel="noreferrer"
@@ -59,13 +59,12 @@ class Landing extends React.Component {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/brunchwithbabs/"
+              href="https://www.instagram.com/brunchwithbabs/?hl=en"
             >
-              @BrunchWithBabs
+              Brunch with Babs
             </a>{' '}
             kick off the swap by trying each other’s favorite holiday
-            traditions! and Babs from kick off the swap by trying each other's
-            favorite holiday traditions!
+            traditions!
           </p>
           <div className="sweeterCard">
             {/* <img className="img-fluid" src={cardBg} alt="" /> */}
@@ -94,9 +93,23 @@ class Landing extends React.Component {
             purchase Brach's Peppermint Candy Canes (12 ct., 5.3 oz) to qualify
             for the rebate. Rebate requests must be received by 1/14/23. Limit
             one (1) rebate per person. Rebate will be paid via Paypal/Venmo. See
-            full T&Cs for details.
+            full{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://c.airbaton.net/campaigns/zjd6SgaiBCKzUr0by1yy/assets/R1arMJ1hg.pdf"
+            >
+              T&Cs
+            </a>{' '}
+            for details.
           </p>
-          <button className="subscribe">Subscribe</button>
+          {/* <form method="post" action="/form/emailsignup">
+            <fieldset>
+              <button type="submit" className="subscribe">
+                Subscribe
+              </button>
+            </fieldset>
+          </form> */}
         </div>
         {''}
 

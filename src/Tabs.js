@@ -19,31 +19,29 @@ class TabsComponent extends React.Component {
     };
   }
 
-  submitData = (email, name, tradition, age) => {
-    this.setState({ email, name, tradition, age });
-    setTimeout(() => {
-      console.log(this.state);
-    }, 500);
-
-    // setTimeout(() => {
-    //   fetch('/api/joke_resource', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       profile: {
-    //         age: this.state.age,
-    //         name: this.state.name,
-    //         email: this.state.email,
-    //       },
-    //       data: {
-    //         tradition: this.state.tradition,
-    //       },
-    //     }),
-    //   });
-    // }, 1000);
-  };
+  // submitData = (email, name, tradition, age) => {
+  //   setTimeout(() => {
+  //     fetch('/api/submission_resource', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         profile: {
+  //           firstName: 'jim',
+  //           lastName: 'gagliano',
+  //           email: 'jim@argtechllc.com',
+  //           gender: 'm',
+  //           city: 'Sylvania',
+  //           state: 'OH',
+  //         },
+  //         data: {
+  //           tradition: 'Making homemade eggnog',
+  //         },
+  //       }),
+  //     });
+  //   }, 1000);
+  // };
 
   render() {
     return (
