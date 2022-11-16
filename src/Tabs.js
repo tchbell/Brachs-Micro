@@ -45,7 +45,7 @@ class TabsComponent extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="sweetnessWrapper">
         <div className="projectContainer">
           {' '}
           <Tabs
