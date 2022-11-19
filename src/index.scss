@@ -38,7 +38,7 @@ code {
 }
 
 .sweetnessWrapper {
-  background-image: url('./assets/images/Mobile/BR-HOLMicrosite-ThankYou-BackgroundImage_Mobile.png');
+  background-image: url('./assets/images/Mobile/CMP_BR_ComingSoon_Microsite-Mobile111822-02.png');
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -51,7 +51,18 @@ code {
   padding-bottom: 4rem;
 
   @media screen and (min-width: 676px) {
-    background-image: url('./assets/images/Desktop/BR-HOLMicrosite-ComingSoonPage-Desktop.png');
+    background-image: url('./assets/images/Desktop/CMP_BR_ComingSoon_Microsite-Desktop111822-01.png');
+  }
+
+  @media screen and (min-width: 676px) {
+    background-position: 54%;
+  }
+
+  @media screen and (min-width: 820px) {
+    background-position: 60%;
+  }
+  @media screen and (min-width: 950px) {
+    background-position: 70%;
   }
 
   .mobile {
