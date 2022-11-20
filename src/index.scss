@@ -165,7 +165,7 @@ code {
 
   @media screen and (min-width: 676px) {
     .landing .copy p {
-      max-width: 400px;
+      max-width: 550px;
     }
   }
 
@@ -182,26 +182,32 @@ code {
 
   .sweeterCard {
     position: relative;
-    // background-image: url('./assets/images/Mobile/Postcard-Envelope-Mobile.png');
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // min-height: 400px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: column;
-    // width: 100%;
+    margin: 0 2rem;
+    @media screen and (min-width: 676px) {
+      margin: 0;
+    }
     form {
       position: absolute;
       top: 30px;
       left: 24px;
+      padding: 1rem;
+
+      @media screen and (min-width: 676px) {
+        padding: 0;
+      }
       .row {
         display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 676px) {
+          flex-direction: row;
+        }
         .col-6 {
           display: flex;
           flex-direction: column;
-          width: 50%;
+          width: 100%;
+          @media screen and (min-width: 676px) {
+            width: 50%;
+          }
           label {
             font-family: Gothic-Black;
             color: #60269e;
@@ -225,13 +231,16 @@ code {
               text-align: left;
               align-items: flex-start;
               border-bottom: none;
+              justify-content: flex-end;
             }
             &.traditionField {
-              margin-top: 40%;
               flex-direction: column;
               justify-content: flex-start;
               align-items: flex-start;
               border-bottom: none;
+              @media screen and (min-width: 676px) {
+                margin-top: 40%;
+              }
               .subText {
                 font-size: 10px;
                 font-family: Gothic-Medium;
@@ -246,8 +255,14 @@ code {
           }
         }
       }
+      .labelRow {
+        display: flex;
+      }
       .cardField.half {
         width: 50%;
+        &.marginLess {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -290,19 +305,20 @@ code {
     text-align: left;
   }
 
-  button.subscribe {
-    padding: 1rem;
-    background-color: #60269e;
+  button {
+    padding: 0.5rem;
+    background-color: #a7248b;
     color: white;
     font-family: Gothic-Medium;
-    font-size: 1.25rem;
-    border-radius: 25px;
+    font-size: 1rem;
+    border-radius: 10px;
     border: none;
     transition: 0.2s ease-in-out all;
-    margin-top: 40px;
+    text-transform: uppercase;
+    margin-top: 1rem;
   }
 
-  button.subscribe:hover {
+  button:hover {
     box-shadow: 2px 2px 5px #000;
     cursor: pointer;
   }

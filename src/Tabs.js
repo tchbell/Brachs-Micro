@@ -19,29 +19,34 @@ class TabsComponent extends React.Component {
     };
   }
 
-  // submitData = (email, name, tradition, age) => {
-  //   setTimeout(() => {
-  //     fetch('/api/submission_resource', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         profile: {
-  //           firstName: 'jim',
-  //           lastName: 'gagliano',
-  //           email: 'jim@argtechllc.com',
-  //           gender: 'm',
-  //           city: 'Sylvania',
-  //           state: 'OH',
-  //         },
-  //         data: {
-  //           tradition: 'Making homemade eggnog',
-  //         },
-  //       }),
-  //     });
-  //   }, 1000);
-  // };
+  submitData = (email, name, tradition, age, city, state) => {
+    console.log(
+      `Emal: ${email}, Name: ${name}, Tradition: ${tradition}, Age: ${age}, City: ${city}, State: ${state}`
+    );
+    const firstName = name.split(' ')[0];
+    const lastName = name.split(' ')[1];
+    setTimeout(() => {
+      fetch('/api/submission_resource', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          profile: {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            gender: '?',
+            city: city,
+            state: state,
+          },
+          data: {
+            tradition: tradition,
+          },
+        }),
+      });
+    }, 1000);
+  };
 
   render() {
     return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/images/Brachs-Logo.png';
-import postCard from './assets/images/Desktop/Postcard-Blank.png';
+import postCardDesktop from './assets/images/Desktop/Postcard-Blank.png';
+import postCardMobile from './assets/images/Mobile/Postcard-Envelope-Mobile.png';
 class Landing extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +11,10 @@ class Landing extends React.Component {
       email: '',
       name: '',
       terms: false,
+      privacy: false,
       tradition: '',
+      state: '',
+      city: '',
     };
   }
 
@@ -25,12 +29,15 @@ class Landing extends React.Component {
   };
 
   submitData = (e) => {
+    console.log(e);
     e.preventDefault();
     this.props.submitData(
       this.state.email,
       this.state.name,
       this.state.tradition,
-      this.state.age
+      this.state.age,
+      this.state.city,
+      this.state.state
     );
   };
 
@@ -43,32 +50,46 @@ class Landing extends React.Component {
           <img className="img-fluid logo" src={logo} alt="" />
           <h1>Sweetness Swap</h1>
           <p>
-            BRACH’S is making moments sweeter this holiday season, bringing
-            generations together with our first-ever nationwide tradition swap.
-          </p>
-          <p>
-            On December 4th, tune in on IG Live to watch{' '}
+            BRACH’S is making moments sweeter this holiday season by bringing
+            generations together for our first-ever holiday tradition swap.
             <a
+              href="https://www.instagram.com/macklemore/?hl=en"
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/macklemore/"
             >
+              {' '}
               Macklemore
             </a>{' '}
-            and Babs from{' '}
+            and{' '}
             <a
+              href="https://www.instagram.com/brunchwithbabs/?hl=en"
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/brunchwithbabs/?hl=en"
             >
-              Brunch with Babs
+              Babs from Brunch
             </a>{' '}
-            kick off the swap by trying each other’s favorite holiday
-            traditions!
+            with Babs officially kicked off the swap and now submissions are
+            open for everyone!
+          </p>
+          <p>
+            Submit your favorite holiday tradition using candy in exchange for a
+            new (well, new to you!) festive activity to try this season. While
+            all free boxes of Brach’s Peppermint Candy Canes have been gifted,
+            be on the lookout for a suggested swapped tradition the week of
+            12/19.
           </p>
           <div className="sweeterCard">
-            <img class="postCard" src={postCard} className="img-fluid" alt="" />
-            <form>
+            <img
+              className="postCard img-fluid desktop"
+              src={postCardDesktop}
+              alt=""
+            />
+            <img
+              className="postCard img-fluid mobile"
+              src={postCardMobile}
+              alt=""
+            />
+            <form id="formId" onSubmit={this.submitData}>
               <div className="row" style={{ height: '100%' }}>
                 <div className="col-6 left">
                   {' '}
@@ -92,9 +113,9 @@ class Landing extends React.Component {
                       required
                     />
                   </label>{' '}
-                  <div className="row">
+                  <div className="labelRow">
                     {' '}
-                    <label className="cardField half">
+                    <label className="cardField half marginLess">
                       City
                       <input
                         name="city"
@@ -126,9 +147,15 @@ class Landing extends React.Component {
                     />
                   </label>
                   <label className="checkbox">
-                    By clicking submit, you agree to receive marketing and
-                    promotional emails from Ferrara Candy Company. See Ferrara’s
-                    privacy policy here.{' '}
+                    <div>
+                      By clicking submit, you agree to receive marketing and
+                      promotional emails from Ferrara Candy Company. See
+                      Ferrara’s privacy policy{' '}
+                      <a href="#" target="_blank">
+                        here
+                      </a>
+                      .{' '}
+                    </div>{' '}
                     <input
                       onChange={this.handleChange}
                       name="privacy"
@@ -139,8 +166,13 @@ class Landing extends React.Component {
                     />
                   </label>
                   <label className="checkbox">
-                    By checking this box you agree to the User Generated Content
-                    Terms & Conditions.
+                    <div>
+                      By checking this box you agree to the{' '}
+                      <a href="#" target="_blank">
+                        User Generated Content Terms & Conditions.
+                      </a>
+                    </div>
+
                     <input
                       onChange={this.handleChange}
                       name="terms"
@@ -150,7 +182,7 @@ class Landing extends React.Component {
                       required
                     />
                   </label>
-                  <p class="smallText">
+                  <p className="smallText desktop">
                     For your submission to be considered as part of the swap you
                     must be 13+ years of age, complete all submission form
                     questions by 12/16 and include clear instructions of a
@@ -176,6 +208,7 @@ class Landing extends React.Component {
                       name="tradition"
                       onChange={this.handleChange}
                       value={this.state.tradition}
+                      maxLength={1500}
                       type="text"
                       rows="4"
                       col="20"
@@ -184,12 +217,11 @@ class Landing extends React.Component {
                   </label>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-6"></div>
-                <div className="col-6"></div>
-              </div>
             </form>
           </div>
+          <button type="submit" form="formId">
+            I Want Candy Canes!
+          </button>
           <p className="disclaimer">
             *Valid for residents of 50 U.S. + D.C., 18+. Offer ends 12/31/22.
             Get up to $5.00* back via rebate on your purchase of one (1) package
@@ -206,6 +238,16 @@ class Landing extends React.Component {
               T&Cs
             </a>{' '}
             for details.
+          </p>
+          <p className="smallText mobile">
+            For your submission to be considered as part of the swap you must be
+            13+ years of age, complete all submission form questions by 12/16
+            and include clear instructions of a tradition that uses BRACH’S
+            candy. Upon submitting a holiday tradition, participants 18+ will
+            receive an email from BRACH’S within 24 hours providing a rebate
+            link to redeem their free* 12ct box of BRACH’S Peppermint Candy
+            Canes. (Offer available to first 5000 participants.) Digital holiday
+            cards will be distributed via email the week of 12/19.
           </p>
           {/* <form method="post" action="/form/emailsignup">
             <fieldset>
