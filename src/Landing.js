@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './assets/images/Brachs-Logo.png';
-
+import postCard from './assets/images/Desktop/Postcard-Blank.png';
 class Landing extends React.Component {
   constructor(props) {
     super(props);
@@ -67,24 +67,128 @@ class Landing extends React.Component {
             traditions!
           </p>
           <div className="sweeterCard">
-            {/* <img className="img-fluid" src={cardBg} alt="" /> */}
-            <h2 className="sweeterHeadline desktop">
-              Want to make <span className="lobster">your</span> moments
-              sweeter?
-            </h2>
-            <h2 className="sweeterHeadline mobile">
-              {' '}
-              Want to make <br />
-              <span className="lobster">your</span>
-              <br /> moments
-              <br /> sweeter?
-            </h2>
-            <p>
-              Come back on December 5th to submit instructions for your favorite
-              holiday tradition involving candy. In exchange, you'll receive a
-              voucher for a free box of BRACH'S Peppermint Candy Canes* and a
-              new festive activity to try this season.
-            </p>
+            <img class="postCard" src={postCard} className="img-fluid" alt="" />
+            <form>
+              <div className="row" style={{ height: '100%' }}>
+                <div className="col-6 left">
+                  {' '}
+                  <label className="cardField">
+                    Name
+                    <input
+                      name="name"
+                      onChange={this.handleChange}
+                      value={this.state.name}
+                      type="text"
+                      required
+                    />
+                  </label>{' '}
+                  <label className="cardField">
+                    Email
+                    <input
+                      name="email"
+                      onChange={this.handleChange}
+                      value={this.state.email}
+                      type="email"
+                      required
+                    />
+                  </label>{' '}
+                  <div className="row">
+                    {' '}
+                    <label className="cardField half">
+                      City
+                      <input
+                        name="city"
+                        onChange={this.handleChange}
+                        value={this.state.city}
+                        type="text"
+                        required
+                      />
+                    </label>
+                    <label className="cardField half">
+                      State
+                      <input
+                        name="state"
+                        onChange={this.handleChange}
+                        value={this.state.namstatee}
+                        type="text"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <label className="cardField">
+                    Age
+                    <input
+                      name="age"
+                      onChange={this.handleChange}
+                      value={this.state.age}
+                      type="number"
+                      required
+                    />
+                  </label>
+                  <label className="checkbox">
+                    By clicking submit, you agree to receive marketing and
+                    promotional emails from Ferrara Candy Company. See Ferrara’s
+                    privacy policy here.{' '}
+                    <input
+                      onChange={this.handleChange}
+                      name="privacy"
+                      type="checkbox"
+                      defaultValue={false}
+                      checked={this.state.privacy}
+                      required
+                    />
+                  </label>
+                  <label className="checkbox">
+                    By checking this box you agree to the User Generated Content
+                    Terms & Conditions.
+                    <input
+                      onChange={this.handleChange}
+                      name="terms"
+                      type="checkbox"
+                      defaultValue={false}
+                      checked={this.state.terms}
+                      required
+                    />
+                  </label>
+                  <p class="smallText">
+                    For your submission to be considered as part of the swap you
+                    must be 13+ years of age, complete all submission form
+                    questions by 12/16 and include clear instructions of a
+                    tradition that uses BRACH’S candy. Upon submitting a holiday
+                    tradition, participants 18+ will receive an email from
+                    BRACH’S within 24 hours providing a rebate link to redeem
+                    their free* 12ct box of BRACH’S Peppermint Candy Canes.
+                    (Offer available to first 5000 participants.) Digital
+                    holiday cards will be distributed via email the week of
+                    12/19.
+                  </p>
+                </div>
+                <div className="col-6 right">
+                  {' '}
+                  <label className="cardField traditionField">
+                    <div>
+                      {' '}
+                      Tradition{' '}
+                      <span className="subText">(1500 character limit)</span>
+                    </div>
+
+                    <textarea
+                      name="tradition"
+                      onChange={this.handleChange}
+                      value={this.state.tradition}
+                      type="text"
+                      rows="4"
+                      col="20"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-6"></div>
+                <div className="col-6"></div>
+              </div>
+            </form>
           </div>
           <p className="disclaimer">
             *Valid for residents of 50 U.S. + D.C., 18+. Offer ends 12/31/22.
@@ -114,7 +218,7 @@ class Landing extends React.Component {
         {''}
 
         {/* <form onSubmit={this.submitData}>
-          <label className="name">
+          <label className="cardField">
             Name
             <input
               name="name"
