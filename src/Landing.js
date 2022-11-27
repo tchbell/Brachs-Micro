@@ -182,18 +182,6 @@ class Landing extends React.Component {
                       required
                     />
                   </label>
-                  <p className="smallText desktop">
-                    For your submission to be considered as part of the swap you
-                    must be 13+ years of age, complete all submission form
-                    questions by 12/16 and include clear instructions of a
-                    tradition that uses BRACH’S candy. Upon submitting a holiday
-                    tradition, participants 18+ will receive an email from
-                    BRACH’S within 24 hours providing a rebate link to redeem
-                    their free* 12ct box of BRACH’S Peppermint Candy Canes.
-                    (Offer available to first 5000 participants.) Digital
-                    holiday cards will be distributed via email the week of
-                    12/19.
-                  </p>
                 </div>
                 <div className="col-6 right">
                   {' '}
@@ -239,7 +227,7 @@ class Landing extends React.Component {
             </a>{' '}
             for details.
           </p>
-          <p className="smallText mobile">
+          <p className="disclaimer ">
             For your submission to be considered as part of the swap you must be
             13+ years of age, complete all submission form questions by 12/16
             and include clear instructions of a tradition that uses BRACH’S
@@ -249,83 +237,7 @@ class Landing extends React.Component {
             Canes. (Offer available to first 5000 participants.) Digital holiday
             cards will be distributed via email the week of 12/19.
           </p>
-          {/* <form method="post" action="/form/emailsignup">
-            <fieldset>
-              <button type="submit" className="subscribe">
-                Subscribe
-              </button>
-            </fieldset>
-          </form> */}
         </div>
-        {''}
-
-        {/* <form onSubmit={this.submitData}>
-          <label className="cardField">
-            Name
-            <input
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.name}
-              type="text"
-              required
-            />
-          </label>
-   
-          <label className="email">
-            Email
-            <input
-              name="email"
-              onChange={this.handleChange}
-              value={this.state.email}
-              required
-              type="email"
-            />
-          </label>
-   
-          <label className="age">
-            Age
-            <input
-              name="age"
-              onChange={this.handleChange}
-              value={this.state.age}
-              required
-              type="age"
-            />
-          </label>
-  
-          <label className="tradition">
-            Tradition
-            <input
-              name="tradition"
-              onChange={this.handleChange}
-              value={this.state.trandition}
-              required
-              type="text"
-            />
-          </label>
-          <label>
-            I agree to the Terms and Conditions
-            <input
-              onChange={this.handleChange}
-              name="terms"
-              type="checkbox"
-              defaultValue={false}
-              checked={this.state.terms}
-              required
-            />
-          </label>
-          <label>
-            I would like to recieve emails form Brach's
-            <input
-              onChange={this.handleChange}
-              name="communication"
-              type="checkbox"
-              defaultValue={false}
-              checked={this.state.communication}
-            />
-          </label>
-          <button type="submit">Submit</button>
-        </form> */}
       </div>
     );
   }

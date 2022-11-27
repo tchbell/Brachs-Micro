@@ -2,14 +2,13 @@ import React from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Landing from './Landing';
+import Thanks from './Thanks';
 
 class TabsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      landing: 'landing',
-      submission: 'submission',
-
+      key: 'landing',
       age: '',
       communication: false,
       email: '',
@@ -46,6 +45,11 @@ class TabsComponent extends React.Component {
         }),
       });
     }, 1000);
+
+    this.setState({ key: 'thanks' });
+    let wrapper = document.getElementsByClassName('sweetnessWrapper')[0];
+    console.log(wrapper);
+    wrapper.classList.add('thanks');
   };
 
   render() {
@@ -62,7 +66,9 @@ class TabsComponent extends React.Component {
             <Tab eventKey="landing" title="landing">
               <Landing submitData={this.submitData}></Landing>
             </Tab>
-            <Tab eventKey="submission" title="submission"></Tab>
+            <Tab eventKey="thanks" title="thanks">
+              <Thanks />
+            </Tab>
           </Tabs>
         </div>
       </div>

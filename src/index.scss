@@ -64,6 +64,12 @@ code {
   @media screen and (min-width: 950px) {
     background-position: 70%;
   }
+  &.thanks {
+    background-image: url('./assets/images/Mobile/BR-CMP-HOLMicrosite-ThankYouPage-Mobile-BG-withArrow.png');
+    @media screen and (min-width: 676px) {
+      background-image: url('./assets/images/Desktop/BR-CMP-HOLMicrosite-ThankYouPage-Desktop-BG-withArrow.png');
+    }
+  }
 
   .mobile {
     display: block;
@@ -112,6 +118,33 @@ code {
     }
   }
 
+  .thanks h1 {
+    font-family: Lobster;
+    color: #a6228c;
+    font-size: 4.5rem;
+    margin: 0;
+    transform: translatey(-15px);
+    @media screen and (min-width: 676px) {
+      transform: translatey(0px);
+    }
+    span.regular {
+      color: #60269e;
+      font-size: 1.5rem;
+      font-family: DKMagical-Brush;
+      display: block;
+      transform: translate(20px, -20px);
+      @media screen and (min-width: 676px) {
+        display: inline-block;
+        font-size: 3.5rem;
+        transform: translate(0px, 0px);
+      }
+    }
+    span.big {
+      font-size: 105px;
+      transform: translatey(20px);
+      display: inline-block;
+    }
+  }
   ul.nav-tabs {
     display: none;
   }
@@ -129,13 +162,15 @@ code {
     min-height: 100vh;
   }
 
-  .landing {
+  .landing,
+  .thanks {
     display: flex;
     min-height: 100vh;
     align-items: center;
   }
 
-  .landing .copy {
+  .landing .copy,
+  .thanks .copy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,36 +181,42 @@ code {
   }
 
   @media screen and (min-width: 676px) {
-    .landing .copy {
+    .landing .copy,
+    .thanks .copy {
       padding: 1rem;
     }
   }
 
   @media screen and (min-width: 676px) {
-    .landing .copy {
+    .landing .copy,
+    .thanks .copy {
       width: 70%;
       padding-right: 2rem;
       margin-left: auto;
     }
   }
 
-  .landing .copy p {
+  .landing .copy p,
+  .thanks .copy p {
     max-width: 300px;
   }
 
   @media screen and (min-width: 676px) {
-    .landing .copy p {
+    .landing .copy p,
+    .thanks .copy p {
       max-width: 550px;
     }
   }
 
-  .landing .logo {
+  .landing .logo,
+  .thanks .logo {
     max-width: 315px;
     margin-top: 17rem;
   }
 
   @media screen and (min-width: 676px) {
-    .landing .logo {
+    .landing .logo,
+    .thanks .logo {
       margin-top: 0;
     }
   }
@@ -188,12 +229,13 @@ code {
     }
     form {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 24px;
       padding: 1rem;
 
       @media screen and (min-width: 676px) {
         padding: 0;
+        top: 30px;
       }
       .row {
         display: flex;
@@ -249,7 +291,11 @@ code {
                 background: transparent;
                 border: none;
                 width: 100%;
-                min-height: 140px;
+
+                border: 1px dashed #60269e;
+                @media screen and (min-width: 676px) {
+                  min-height: 140px;
+                }
               }
             }
           }
@@ -327,6 +373,11 @@ code {
     border: none;
   }
 
+  .thanks {
+    p.smallText {
+      margin-bottom: 1rem;
+    }
+  }
   p.smallText {
     margin: 0;
     font-size: 6px;
