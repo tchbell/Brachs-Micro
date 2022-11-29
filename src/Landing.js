@@ -68,15 +68,16 @@ class Landing extends React.Component {
             >
               Babs from Brunch
             </a>{' '}
-            with Babs officially kicked off the swap and now submissions are
-            open for everyone!
+            officially{' '}
+            <a href="#" target="_blank" rel="noreferrer">
+              kicked off the swap
+            </a>{' '}
+            and now submissions are open for everyone!
           </p>
           <p>
             Submit your favorite holiday tradition using candy in exchange for a
-            new (well, new to you!) festive activity to try this season. While
-            all free boxes of Brach’s Peppermint Candy Canes have been gifted,
-            be on the lookout for a suggested swapped tradition the week of
-            12/19.
+            box of free Brach's Peppermint Candy Canes* and a new (well, new to
+            you!) festive activity to try this season with family and friends.
           </p>
           <div className="sweeterCard">
             <img
