@@ -152,7 +152,11 @@ class Landing extends React.Component {
                       By clicking submit, you agree to receive marketing and
                       promotional emails from Ferrara Candy Company. See
                       Ferrara’s privacy policy{' '}
-                      <a href="#" target="_blank">
+                      <a
+                        href="https://www.ferrarausa.com/privacy-policy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         here
                       </a>
                       .{' '}
@@ -169,7 +173,7 @@ class Landing extends React.Component {
                   <label className="checkbox">
                     <div>
                       By checking this box you agree to the{' '}
-                      <a href="#" target="_blank">
+                      <a href="/ugc-termsofuse" rel="noreferrer" target="_blank">
                         User Generated Content Terms & Conditions.
                       </a>
                     </div>
@@ -211,7 +215,7 @@ class Landing extends React.Component {
           <button type="submit" form="formId">
             I Want Candy Canes!
           </button>
-          <p className="disclaimer">
+          <p className="disclaimerTxt">
             *Valid for residents of 50 U.S. + D.C., 18+. Offer ends 12/31/22.
             Get up to $5.00* back via rebate on your purchase of one (1) package
             of Brach's Peppermint Candy Canes (12 ct., 5.3 oz only). Must
@@ -228,7 +232,7 @@ class Landing extends React.Component {
             </a>{' '}
             for details.
           </p>
-          <p className="disclaimer ">
+          <p className="disclaimerTxt ">
             For your submission to be considered as part of the swap you must be
             13+ years of age, complete all submission form questions by 12/16
             and include clear instructions of a tradition that uses BRACH’S
