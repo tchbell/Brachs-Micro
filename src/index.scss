@@ -38,9 +38,9 @@ code {
 }
 
 .sweetnessWrapper {
-  background-image: url('./assets/images/Mobile/CMP_BR_ComingSoon_Microsite-Mobile111822-02.png');
+  background-image: url('./assets/images/Mobile/BR-Mobile_SweetnessSwap-Microsite-Mobile-Bkg2.png');
   background-size: cover;
-  background-position: center center;
+  background-position: 70% center;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -231,7 +231,7 @@ code {
       position: absolute;
       top: 20px;
       left: 24px;
-      padding: 1rem;
+      // padding: 1rem;
 
       @media screen and (min-width: 676px) {
         padding: 0;

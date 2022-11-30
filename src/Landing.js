@@ -57,22 +57,18 @@ class Landing extends React.Component {
               target="_blank"
               rel="noreferrer"
             >
-              {' '}
               Macklemore
             </a>{' '}
-            and{' '}
+            and Babs from{' '}
             <a
               href="https://www.instagram.com/brunchwithbabs/?hl=en"
               target="_blank"
               rel="noreferrer"
             >
-              Babs from Brunch
+              Brunch with Babs
             </a>{' '}
-            officially{' '}
-            <a href="#" target="_blank" rel="noreferrer">
-              kicked off the swap
-            </a>{' '}
-            and now submissions are open for everyone!
+            officially kicked off the swap and now submissions are open for
+            everyone!
           </p>
           <p>
             Submit your favorite holiday tradition using candy in exchange for a
@@ -173,7 +169,11 @@ class Landing extends React.Component {
                   <label className="checkbox">
                     <div>
                       By checking this box you agree to the{' '}
-                      <a href="/ugc-termsofuse" rel="noreferrer" target="_blank">
+                      <a
+                        href="/ugc-termsofuse"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
                         User Generated Content Terms & Conditions.
                       </a>
                     </div>

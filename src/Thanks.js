@@ -31,12 +31,6 @@ class Thanks extends React.Component {
               alt=""
             />
           </div>
-          <p>
-            Thank you for participating in BRACH’S Sweetness Swap. While all the
-            free boxes of Brach’s Peppermint Candy Canes* have been gifted, stay
-            tuned for your virtual holiday card with a suggested swapped
-            tradition the week of December 19!
-          </p>
           <p className="smallText">
             *Valid for residents of 50 U.S. + D.C., 18+. Offer ends 12/31/22.
             Get up to $5.00* back via rebate on your purchase of one (1) package
@@ -44,7 +38,11 @@ class Thanks extends React.Component {
             purchase Brach's Peppermint Candy Canes (12 ct., 5.3 oz) to qualify
             for the rebate. Rebate requests must be received by 1/14/23. Limit
             one (1) rebate per person. Rebate will be paid via Paypal/Venmo. See
-            full T&Cs for details.
+            full0{' '}
+            <a href="/ugc-termsofuse" rel="noreferrer" target="_blank">
+              T&Cs{' '}
+            </a>{' '}
+            for details.
           </p>
           <p className="smallText">
             {' '}
