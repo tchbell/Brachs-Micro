@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './assets/images/Brachs-Logo.png';
 import postCardDesktop from './assets/images/Desktop/ThankYouEnvelope-Desktop.png';
-import postCardMobile from './assets/images/Mobile/ThankYouEnvelope-Mobile.png';
+import postCardMobile from './assets/images/Mobile/thank-you-envelope-01.png';
 class Thanks extends React.Component {
   constructor(props) {
     super(props);

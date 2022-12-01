@@ -53,6 +53,7 @@ class Landing extends React.Component {
             BRACH’S is making moments sweeter this holiday season by bringing
             generations together for our first-ever holiday tradition swap.
             <a
+              style={{ marginLeft: '4px' }}
               href="https://www.instagram.com/macklemore/?hl=en"
               target="_blank"
               rel="noreferrer"
