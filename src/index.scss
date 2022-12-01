@@ -40,7 +40,7 @@ code {
 .sweetnessWrapper {
   background-image: url('./assets/images/Mobile/BR-Mobile_SweetnessSwap-Microsite-Mobile-Bkg2.png');
   background-size: cover;
-  background-position: 70% center;
+  background-position: 70% -70px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -49,6 +49,9 @@ code {
   height: 100%;
   margin-bottom: -80px;
   padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-repeat: no-repeat;
+  background-color: #f0cde5;
 
   @media screen and (min-width: 676px) {
     background-image: url('./assets/images/Desktop/CMP_BR_ComingSoon_Microsite-Desktop111822-01.png');
